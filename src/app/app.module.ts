@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PlansComponent } from './plans/plans.component';
 import { ServicesComponent } from './services/services.component';
 import { AgentsComponent } from './agents/agents.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 
@@ -30,6 +31,7 @@ import { AgentsComponent } from './agents/agents.component';
     PlansComponent,
     ServicesComponent,
     AgentsComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
