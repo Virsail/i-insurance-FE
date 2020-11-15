@@ -9,6 +9,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -20,6 +21,7 @@ import { AuthModule } from './auth/auth.module';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
