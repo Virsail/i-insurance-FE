@@ -12,6 +12,8 @@ import { AuthModule } from './auth/auth.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { PlansComponent } from './plans/plans.component';
+import { ServicesComponent } from './services/services.component';
+import { AgentsComponent } from './agents/agents.component';
 
 
 
@@ -27,6 +29,8 @@ import { PlansComponent } from './plans/plans.component';
     HomeComponent,
     NavbarComponent,
     PlansComponent,
+    ServicesComponent,
+    AgentsComponent,
   ],
   imports: [
     BrowserModule,
