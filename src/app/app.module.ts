@@ -10,6 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CommonModule } from '@angular/common';
+import { PlansComponent } from './plans/plans.component';
+
+
 
 
 
@@ -22,6 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     FooterComponent,
     HomeComponent,
     NavbarComponent,
+    PlansComponent,
   ],
   imports: [
     BrowserModule,
