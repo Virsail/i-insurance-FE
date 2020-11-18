@@ -15,6 +15,7 @@ import { ServicesComponent } from './services/services.component';
 import { AgentsComponent } from './agents/agents.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AgreementsComponent } from './agreements/agreements.component';
+import { BranchesComponent } from './branches/branches.component';
 
 
 
@@ -34,6 +35,7 @@ import { AgreementsComponent } from './agreements/agreements.component';
     AgentsComponent,
     LandingPageComponent,
     AgreementsComponent,
+    BranchesComponent,
   ],
   imports: [
     BrowserModule,
