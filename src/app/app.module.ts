@@ -16,7 +16,7 @@ import { AgentsComponent } from './agents/agents.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AgreementsComponent } from './agreements/agreements.component';
 import { BranchesComponent } from './branches/branches.component';
-import { AgmCoreModule } from '@agm/core';
+
 
 
 
@@ -44,10 +44,6 @@ import { AgmCoreModule } from '@agm/core';
     FormsModule,
     RouterModule,
     AuthModule,
-    AgmCoreModule.forRoot({
-
-      apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
-    })
   ],
     
 
