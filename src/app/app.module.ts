@@ -16,6 +16,13 @@ import { AgentsComponent } from './agents/agents.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AgreementsComponent } from './agreements/agreements.component';
 import { BranchesComponent } from './branches/branches.component';
+import { TestimonyComponent } from './testimony/testimony.component';
+import { SharedModule } from './shared/shared.module';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AdminProfileComponent } from './admin-profile/admin-profile.component';
+import { AgentProfileComponent } from './agent-profile/agent-profile.component';
 
 
 
@@ -37,6 +44,12 @@ import { BranchesComponent } from './branches/branches.component';
     LandingPageComponent,
     AgreementsComponent,
     BranchesComponent,
+    TestimonyComponent,
+    AboutComponent,
+    ContactComponent,
+    ProfileComponent,
+    AdminProfileComponent,
+    AgentProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +57,8 @@ import { BranchesComponent } from './branches/branches.component';
     FormsModule,
     RouterModule,
     AuthModule,
+    SharedModule,
+    
   ],
     
 

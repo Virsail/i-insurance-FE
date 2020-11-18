@@ -6,7 +6,9 @@ import { AgentsComponent } from './agents/agents.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomeComponent } from './home/home.component';
 import { BranchesComponent } from './branches/branches.component';
-
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -16,6 +18,10 @@ const routes: Routes = [
   {path : 'agents', component : AgentsComponent }, 
   {path : 'home', component : HomeComponent }, 
   {path : 'locations', component : BranchesComponent }, 
+  { path: 'about' , component : AboutComponent },
+  { path: 'profile' , component : ProfileComponent },
+  { path: 'contact' , component : ContactComponent },
+
 
 ];
 
