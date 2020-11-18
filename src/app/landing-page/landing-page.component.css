@@ -1,0 +1,12 @@
+.container-fluid{
+    background-image: url('/assets/images/home.jpg');
+    background-size: cover;
+    height: 101vh;
+    background-attachment: fixed;
+    /* color: white; */
+    display: flex;
+    /* font-size: 1.2em; */
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}

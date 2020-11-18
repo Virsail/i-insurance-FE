@@ -1,0 +1,21 @@
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('/assets/images/students.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .masthead1 {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('/assets/images/lady.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #contact .card:hover i,#contact .card:hover h4{
+	color: #87d37c;
+}
