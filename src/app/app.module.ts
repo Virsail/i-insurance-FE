@@ -15,6 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AdminProfileComponent } from './admin-profile/admin-profile.component';
+import { AgentProfileComponent } from './agent-profile/agent-profile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AboutComponent,
     ContactComponent,
     ProfileComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    AdminProfileComponent,
+    AgentProfileComponent
   ],
   imports: [
     BrowserModule,
