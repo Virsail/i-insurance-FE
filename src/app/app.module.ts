@@ -11,7 +11,6 @@ import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlansComponent } from './plans/plans.component';
-import { ServicesComponent } from './services/services.component';
 import { AgentsComponent } from './agents/agents.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AgreementsComponent } from './agreements/agreements.component';
@@ -23,6 +22,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AgentProfileComponent } from './agent-profile/agent-profile.component';
+import { ServiceComponent } from './service/service.component';
 
 
 
@@ -39,7 +39,6 @@ import { AgentProfileComponent } from './agent-profile/agent-profile.component';
     HomeComponent,
     NavbarComponent,
     PlansComponent,
-    ServicesComponent,
     AgentsComponent,
     LandingPageComponent,
     AgreementsComponent,
@@ -49,7 +48,8 @@ import { AgentProfileComponent } from './agent-profile/agent-profile.component';
     ContactComponent,
     ProfileComponent,
     AdminProfileComponent,
-    AgentProfileComponent
+    AgentProfileComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
