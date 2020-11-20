@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from "@angular/common";
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +21,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AgentProfileComponent } from './agent-profile/agent-profile.component';
+import { RegisterComponent } from './auth/components/register/register.component';
+import { RegisterService } from './auth/components/services/register.service';
 
 @NgModule({
   declarations: [
@@ -36,12 +42,16 @@ import { AgentProfileComponent } from './agent-profile/agent-profile.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    FormsModule,
     AppRoutingModule,
     SharedModule,
     AuthModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
 
-  providers: [],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
