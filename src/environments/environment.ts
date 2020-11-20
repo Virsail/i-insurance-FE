@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://iinsurance.herokuapp.com/api/login/',
+  jwtLogin: 'api-token-auth/',
+  jwtRefresh: 'api-token-refresh/',
 };
 
 /*

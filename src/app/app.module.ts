@@ -9,6 +9,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
+import { environment } from '../environments/environment';
+import { AuthGuard } from './_guards/auth.guard';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlansComponent } from './plans/plans.component';
 import { AgentsComponent } from './agents/agents.component';
@@ -23,6 +25,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AgentProfileComponent } from './agent-profile/agent-profile.component';
 import { ServiceComponent } from './service/service.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
+import { ReactiveFormsModule } from '@angular/forms';
+import { routing } from './app.routing';
+import { User } from './_models';
+import { JwtInterceptor } from './_helpers';
+
+
 
 
 
@@ -49,7 +58,12 @@ import { ServiceComponent } from './service/service.component';
     ProfileComponent,
     AdminProfileComponent,
     AgentProfileComponent,
-    ServiceComponent
+    ServiceComponent,
+    AuthGuard,
+    User,
+    
+  
+    
   ],
   imports: [
     BrowserModule,
@@ -58,16 +72,20 @@ import { ServiceComponent } from './service/service.component';
     RouterModule,
     AuthModule,
     SharedModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    routing
     
   ],
     
 
   
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
 
 
 

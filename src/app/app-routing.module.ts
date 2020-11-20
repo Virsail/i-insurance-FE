@@ -9,27 +9,35 @@ import { BranchesComponent } from './branches/branches.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthModule } from './auth/auth.module';
+import { AuthGuard } from './_guards';
 
 
 const routes: Routes = [
-  {path : '', component : LandingPageComponent }, 
+  {path : '', component : LandingPageComponent, canActivate: [AuthGuard] }, 
   {path : 'plans', component : PlansComponent },  
   {path : 'services', component : ServiceComponent }, 
   {path : 'agents', component : AgentsComponent }, 
   {path : 'home', component : HomeComponent }, 
   {path : 'locations', component : BranchesComponent }, 
-  { path: 'about' , component : AboutComponent },
-  { path: 'profile' , component : ProfileComponent },
-  { path: 'contact' , component : ContactComponent },
+  {path: 'about' , component : AboutComponent },
+  {path: 'profile' , component : ProfileComponent },
+  {path: 'contact' , component : ContactComponent },
+  
+
+   // otherwise redirect to home
+   { path: '**', redirectTo: '' }
+  ];
 
 
-];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 
 
 

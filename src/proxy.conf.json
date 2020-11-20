@@ -1,0 +1,11 @@
+{
+    "*api": {
+        "*target": "https://iinsurance.herokuapp.com/api/login/",
+        "*secure": false,
+        "pathRewrite": {
+            "*^/api":  "*"
+        },
+        "*changeOrigin": false,
+        "*logLevel": "debug"
+    }
+}
