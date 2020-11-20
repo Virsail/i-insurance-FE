@@ -27,7 +27,6 @@ import { AgentProfileComponent } from './agent-profile/agent-profile.component';
 import { ServiceComponent } from './service/service.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
 import { ReactiveFormsModule } from '@angular/forms';
-import { routing } from './app.routing';
 import { User } from './_models';
 import { JwtInterceptor } from './_helpers';
 
@@ -74,7 +73,7 @@ import { JwtInterceptor } from './_helpers';
     SharedModule,
     HttpClientModule,
     ReactiveFormsModule,
-    routing
+    
     
   ],
     
