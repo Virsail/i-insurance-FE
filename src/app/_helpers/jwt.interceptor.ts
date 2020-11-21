@@ -32,16 +32,14 @@ export class JwtInterceptor implements HttpInterceptor {
 
             if ( error instanceof HttpErrorResponse && (error.status === 401 || error.status === 403)
               && request.url === `${environment.apiUrl}/${environment.jwtRefresh}`) {
-              // We do another check to see if refresh token failed
-              // In this case we want to logout user and to redirect it to login page  
-              // console.log('on your way out')            
+          //why the fuck are you pissing me           
               this.authenticationService.logout();              
               return throwError(error);
             }
             else if (error instanceof HttpErrorResponse && error.status === 403) {
-                return this.handle403Error(request, next);
-            } else {
-                return throwError(error);
+            //    return this.handle403Error(request, next);
+           // } else {
+         //       return throwError(error);
             }
           }));
         // return next.handle(request);
