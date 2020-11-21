@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterService } from '../services/register.service';
-
+import { NgForm} from '@angular/forms'
+ 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -21,7 +22,7 @@ export class RegisterComponent implements OnInit {
 
     };
   }
-  registerUser () {
+  registerUser (register: NgForm) {
     this.registerService.registerNewUser(this.register).subscribe(
       response => {
         alert('user' + this.register.username + 'has been created')
