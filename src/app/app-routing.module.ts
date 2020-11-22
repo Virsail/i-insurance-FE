@@ -9,12 +9,11 @@ import { BranchesComponent } from './branches/branches.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
-import { AuthModule } from './auth/auth.module';
-import { AuthGuard } from './_guards';
+
 
 
 const routes: Routes = [
-  {path : '', component : LandingPageComponent, canActivate: [AuthGuard] }, 
+  {path : '', component : LandingPageComponent }, 
   {path : 'plans', component : PlansComponent },  
   {path : 'services', component : ServiceComponent }, 
   {path : 'agents', component : AgentsComponent }, 

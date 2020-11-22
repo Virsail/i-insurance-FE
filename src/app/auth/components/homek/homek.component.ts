@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../_models';
+import { UserService, AuthenticationService } from '../services';
+import { first } from 'rxjs/operators';
+
+
 
 @Component({
   selector: 'app-homek',
@@ -7,9 +12,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomekComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private userService: UserService) { }
+  users: User[] = [];
   ngOnInit(): void {
   }
 
-}
+} // this.userService.getAll().pipe(first()).subscribe(users => {
+  //     this.users = users;
+  // });
+
+
+
+
+
+
+
+
+
+

@@ -2,9 +2,20 @@
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import * as jwtDecode from 'jwt-decode';
-import { User } from './_models';
+import jwt_decode from 'jwt-decode';
+import { User } from '../_models';
 import { environment } from '../../environments/environment';
+import * as express from "express";
+
+
+
+
+let token = "loginapi";
+let decoded = jwt_decode(token);
+
+
+
+const app = express();
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
@@ -28,7 +39,7 @@ export class AuthenticationService {
                     let currentUser: User;
                     if (response.access) {
                         // store user details and jwt token in local storage to keep user logged in between page refreshes
-                        currentUser = jwtDecode(response.access)
+                        currentUser = jwt_decode(response.access)
                         currentUser.token = response.access
                         currentUser.refreshToken = response.refresh
                         localStorage.setItem('currentUser', JSON.stringify(currentUser));
@@ -53,7 +64,7 @@ export class AuthenticationService {
                     let currentUser: User;
                     if (response.access) {
                         // store user details and jwt token in local storage to keep user logged in between page refreshes
-                        currentUser = jwtDecode(response.access)
+                        currentUser = jwt_decode(response.access)
                         currentUser.token = response.access
                         currentUser.refreshToken = response.refresh
                         localStorage.setItem('currentUser', JSON.stringify(currentUser));

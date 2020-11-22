@@ -9,8 +9,6 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
-import { environment } from '../environments/environment';
-import { AuthGuard } from './_guards/auth.guard';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlansComponent } from './plans/plans.component';
 import { AgentsComponent } from './agents/agents.component';
@@ -27,8 +25,6 @@ import { AgentProfileComponent } from './agent-profile/agent-profile.component';
 import { ServiceComponent } from './service/service.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
 import { ReactiveFormsModule } from '@angular/forms';
-import { User } from './_models';
-import { JwtInterceptor } from './_helpers';
 
 
 
@@ -58,9 +54,7 @@ import { JwtInterceptor } from './_helpers';
     AdminProfileComponent,
     AgentProfileComponent,
     ServiceComponent,
-    AuthGuard,
-    User,
-    
+  
   
     
   ],
@@ -80,7 +74,7 @@ import { JwtInterceptor } from './_helpers';
 
   
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    
   ],
   bootstrap: [AppComponent]
 })
