@@ -16,13 +16,15 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.register = {
-      username: '',
+      firstname: '',
+      middlename: '',
+      lastname: '',
       email: '',
       password : '',
 
     };
   }
-  registerUser (register: NgForm) {
+  registerUser (register) {
     this.registerService.registerNewUser(this.register).subscribe(
       response => {
         alert('user' + this.register.username + 'has been created')
@@ -34,3 +36,5 @@ export class RegisterComponent implements OnInit {
   }
 
 }
+
+

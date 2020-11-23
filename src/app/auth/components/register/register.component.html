@@ -1,46 +1,71 @@
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<form #register="ngForm" (ngSubmit)="onSubmit(register)">
+
+<form class="form-horizontal"  >
   <fieldset>
     <div id="legend">
       <legend class="">Register</legend>
     </div>
-    <div class="control-group">
-      <!-- Username -->
-      <label class="control-label"  for="username">Username</label>
-      <div class="controls">
-        <input type="text" name="username"  class="input-xlarge" [(ngModel)] = "register.username">
-        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
-      <!-- E-mail -->
-      <label class="control-label" for="email">E-mail</label>
-      <div class="controls">
-        <input type="text"  name="email"  class="input-xlarge" [(ngModel)]= "register.email" >
-        <p class="help-block">Please provide your E-mail</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
-      <!-- Password-->
-      <label class="control-label" for="password">Password</label>
-      <div class="controls">
-        <input type="password"  name="password"  class="input-xlarge" [(ngModel)]= "register.password">
-        <p class="help-block">Password should be at least 4 characters</p>
-      </div>
-    </div>
- 
- 
-    <div class="control-group">
-      <!-- Button -->
-      <div class="controls">
-        <button class="btn btn-success" (click)="registerUser()">Register</button>
-      </div>
-    </div>
+
+
+
+
+<div class="control-group">
+  <!-- Firstname -->
+  <label class="control-label"  for="firstname">Firstname</label>
+  <div class="controls">
+    <input type="text" name="firstname"  class="input-xlarge" [(ngModel)] = "register.firstname">
+    <p class="help-block">firstname can contain any letters or numbers, without spaces</p>
+  </div>
+</div>
+<div class="control-group">
+  <!-- Middlename -->
+  <label class="control-label"  for="Middlename">Middlename</label>
+  <div class="controls">
+    <input type="text" name="Middlename"  class="input-xlarge" [(ngModel)] = "register.middlename">
+    <p class="help-block">Middlename can contain any letters or numbers, without spaces</p>
+  </div>
+</div>
+<div class="control-group">
+  <!-- Lastname -->
+  <label class="control-label"  for="Lastname">Lastname</label>
+  <div class="controls">
+    <input type="text" name="Lastname"  class="input-xlarge" [(ngModel)] = "register.lastname">
+    <p class="help-block">Lastname can contain any letters or numbers, without spaces</p>
+  </div>
+</div>
+
+<div class="control-group">
+  <!-- E-mail -->
+  <label class="control-label" for="email">E-mail</label>
+  <div class="controls">
+    <input type="text"  name="email"  class="input-xlarge" [(ngModel)]= "register.email" >
+    <p class="help-block">Please provide your E-mail</p>
+  </div>
+</div>
+
+<div class="control-group">
+  <!-- Password-->
+  <label class="control-label" for="password">Password</label>
+  <div class="controls">
+    <input type="password"  name="password"  class="input-xlarge" [(ngModel)]= "register.password">
+    <p class="help-block">Password should be at least 4 characters</p>
+  </div>
+</div>
+   
+<div class="control-group">
+  <!-- Button -->
+  <div class="controls">
+    <button class="btn btn-success" (click)="registerUser()">Register</button>
+  </div>
+</div>
   </fieldset>
 </form>
+
+
+
+
+
+
