@@ -5,17 +5,7 @@ import { map } from 'rxjs/operators';
 import jwt_decode from 'jwt-decode';
 import { User } from '../_models';
 import { environment } from '../../environments/environment';
-import * as express from "express";
 
-
-
-
-let token = "loginapi";
-let decoded = jwt_decode(token);
-
-
-
-const app = express();
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
