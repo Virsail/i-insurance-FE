@@ -13,3 +13,7 @@
 h4 {
     background-color: #1C2331;
 }
+
+.btn btn-dark btn-xl {
+    height: 70vh;
+}

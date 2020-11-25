@@ -33,7 +33,10 @@
  }
 
  .card-img-top {
-     height: 500px;
+     height: 600px;
+     padding: 2rem;
+
+     
  }
 
  .card-body card-body-cascade text-center rgba-black-strong {
@@ -86,8 +89,19 @@ h6 {
   animation-name: cf3FadeInOut;
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-direction: alternate-reverse;
+}
+.mt-2 text-justify {
+    background-color: black;
+}
+.first {
+    background-color: #1C2331;
+    color: white;
+}
+.allones {
+    background-color: #1C2331;
+    color: white;
 }
 
 @keyframes cf3FadeInOut {

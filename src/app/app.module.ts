@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
 import { AppCustomLayoutComponent } from './layout/app-custom-layout/app-custom-layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -23,8 +22,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AgentProfileComponent } from './agent-profile/agent-profile.component';
 import { ServiceComponent } from './service/service.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
-import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClientJsonpModule } from '@angular/common/http'; 
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RegisterService } from './auth/components/services/register.service';
+import { EmailComponent } from './email/email.component';
+
 
 
 
@@ -54,6 +56,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminProfileComponent,
     AgentProfileComponent,
     ServiceComponent,
+    EmailComponent,
   
   
     
@@ -66,6 +69,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AuthModule,
     SharedModule,
     HttpClientModule,
+    HttpClientJsonpModule,
     ReactiveFormsModule,
     
     
@@ -73,9 +77,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     
 
   
-  providers: [
-    
-  ],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,7 +15,7 @@
     "@angular/cdk": "^11.0.0",
     "@angular/common": "~11.0.0",
     "@angular/compiler": "~11.0.0",
-    "@angular/core": "~11.0.0",
+    "@angular/core": "^11.0.2",
     "@angular/forms": "~11.0.0",
     "@angular/http": "^7.2.16",
     "@angular/material": "^11.0.0",
@@ -28,10 +28,12 @@
     "bootstrap": "^4.5.3",
     "core-js": "^3.6.5",
     "jwt-decode": "^3.1.2",
+    "mime": "^2.4.6",
     "node-jose-browserify": "^1.1.14",
     "npm": "^6.14.7",
     "path": "^0.12.7",
     "rxjs": "~6.6.3",
+    "rxjs-compat": "^6.6.3",
     "services": "^0.0.3",
     "stream": "^0.0.2",
     "tslib": "^2.0.3",
@@ -40,7 +42,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1100.1",
     "@angular/cli": "^11.0.2",
-    "@angular/compiler-cli": "~11.0.0",
+    "@angular/compiler-cli": "^11.0.2",
     "@types/jasmine": "~3.6.1",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "^14.14.8",
@@ -57,5 +59,17 @@
     "ts-node": "~9.0.0",
     "tslint": "~6.1.0",
     "typescript": "^4.0.5"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false,
+    "crypto": false,
+    "stream": false,
+    "http": false,
+    "tls": false,
+    "zlib": false,
+    "https": false,
+    "net": false
   }
 }

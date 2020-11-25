@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   apiUrl: 'https://iinsurance.herokuapp.com/api/login/',
-  jwtLogin: 'api-token-auth/',
   jwtRefresh: 'api-token-refresh/',
 };
 

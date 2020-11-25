@@ -9,10 +9,16 @@ import { BranchesComponent } from './branches/branches.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AgentProfileComponent } from './agent-profile/agent-profile.component';
+import { LoginComponent } from './auth/components/login';
+import { RegisterComponent } from './auth/components/register/register.component';
+
 
 
 
 const routes: Routes = [
+  {path : 'register', component : RegisterComponent},
+  {path : 'login', component : LoginComponent },
   {path : '', component : LandingPageComponent }, 
   {path : 'plans', component : PlansComponent },  
   {path : 'services', component : ServiceComponent }, 
@@ -22,20 +28,26 @@ const routes: Routes = [
   {path: 'about' , component : AboutComponent },
   {path: 'profile' , component : ProfileComponent },
   {path: 'contact' , component : ContactComponent },
-  
+  {path: 'agent' , component : AgentProfileComponent },
+  {path: 'profile' , component : ProfileComponent },
+  {path: 'about' , component : AboutComponent },
 
-   // otherwise redirect to home
-   { path: '**', redirectTo: '' }
+
   ];
-
-
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
+
+
+
+  
+
 
 
 

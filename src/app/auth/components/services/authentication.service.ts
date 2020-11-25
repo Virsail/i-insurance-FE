@@ -5,17 +5,7 @@ import { map } from 'rxjs/operators';
 import jwt_decode from 'jwt-decode';
 import { User } from '../_models';
 import { environment } from '../../environments/environment';
-import * as express from "express";
 
-
-
-
-let token = "loginapi";
-let decoded = jwt_decode(token);
-
-
-
-const app = express();
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
@@ -32,7 +22,7 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string) {
-        return this.http.post<any>(`${environment.apiUrl}/${environment.jwtLogin}`, { username, password })
+        return this.http.post<any>(`${environment.apiUrl}`, { username, password })
             .pipe(
                 map(response => {
                     // login successful if there's a jwt token in the response

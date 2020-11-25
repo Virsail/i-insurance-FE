@@ -3,13 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { RegisterComponent } from './components/register/register.component';
-import { HomekComponent } from './components/homek/homek.component';
-import { AuthGuard } from './components/_guards';
+
 
 
 
 const routes: Routes = [
-  { path: 'homek', component: HomekComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   // otherwise redirect to home
   { path: '**', redirectTo: 'homek' },
@@ -23,6 +21,10 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AuthRoutingModule { }
+
+
+
+
 
 
 
