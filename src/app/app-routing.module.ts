@@ -10,15 +10,12 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AgentProfileComponent } from './agent-profile/agent-profile.component';
-import { LoginComponent } from './auth/components/login';
-import { RegisterComponent } from './auth/components/register/register.component';
+
 
 
 
 
 const routes: Routes = [
-  {path : 'register', component : RegisterComponent},
-  {path : 'login', component : LoginComponent },
   {path : '', component : LandingPageComponent }, 
   {path : 'plans', component : PlansComponent },  
   {path : 'services', component : ServiceComponent }, 

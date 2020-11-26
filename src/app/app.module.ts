@@ -7,7 +7,6 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
-import { AuthModule } from './auth/auth.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlansComponent } from './plans/plans.component';
 import { AgentsComponent } from './agents/agents.component';
@@ -24,7 +23,6 @@ import { AgentProfileComponent } from './agent-profile/agent-profile.component';
 import { ServiceComponent } from './service/service.component';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClientJsonpModule } from '@angular/common/http'; 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { RegisterService } from './auth/components/services/register.service';
 import { EmailComponent } from './email/email.component';
 
 
@@ -66,7 +64,6 @@ import { EmailComponent } from './email/email.component';
     AppRoutingModule,
     FormsModule,
     RouterModule,
-    AuthModule,
     SharedModule,
     HttpClientModule,
     HttpClientJsonpModule,
@@ -77,7 +74,7 @@ import { EmailComponent } from './email/email.component';
     
 
   
-  providers: [RegisterService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
