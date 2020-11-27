@@ -1,5 +1,5 @@
 .container-fluid{
-    background-image: src"../assets/images/home.jpg";
+    background-image: url(/assets/images/home.jpg);
     background-size: cover;
     height: 101vh;
     background-attachment: fixed;
